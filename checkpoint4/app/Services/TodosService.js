@@ -1,7 +1,15 @@
+import { ProxyState } from "../AppState.js"
 import { sandboxApi } from "./AxiosService.js"
 
 
 class TodosService {
+
+
+  async getAllTasks() {
+    const res = await sandboxApi.get('todos')
+    console.log('get my taskssss', res.data)
+    ProxyState.tasks = res.data
+  }
 
   async getMyTodos() {
     const res = await sandboxApi.get('')
@@ -15,3 +23,4 @@ class TodosService {
 }
 
 export const todosService = new TodosService()
+
