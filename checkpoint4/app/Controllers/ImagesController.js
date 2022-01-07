@@ -8,9 +8,13 @@ async function getImages() {
     console.error(error)
   }
 }
+
+
+
 export class ImagesController {
   constructor() {
 
     getImages()
   }
 }
+
