@@ -1,3 +1,4 @@
+import { ProxyState } from "../AppState.js"
 import { todosService } from "../Services/TodosService.js"
 
 async function getMyTodos() {
@@ -16,6 +17,10 @@ export class TodosController {
   async createTask() {
     window.event.preventDefault()
     console.log('submitted')
+    const tasks = ProxyState.tasks
+    let template = ''
+    tasks.forEach(t => template += t.Template)
+    document.getElementById('todos').innerHTML = template
   }
 
 

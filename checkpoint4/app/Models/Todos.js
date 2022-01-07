@@ -8,7 +8,7 @@ export class Todos {
 
   get Template() {
     return `
-    <div class="card" style="width: 30%">
+    <div class="card m-3" style="width: 30%">
             <div class="card-body">
               <h5 class="card-title text-center">Your To-Do's</h5>
               <div id="todos">
