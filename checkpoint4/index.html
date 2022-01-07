@@ -40,9 +40,9 @@
                 <p><input type="checkbox"> Do the Dishes </p>
               </div>
 
-              <form type="text">
-                <input onsubmit="app.TodosController.createTask()" type="text" placeholder="Task..">
-                <button class="btn-sm btn-dark text-light">ADD</button>
+              <form type="text" onsubmit="app.todosController.createTask()">
+                <input type="text" name="description" placeholder="Task..">
+                <button type="submit" class="btn-sm btn-dark text-light">ADD</button>
               </form>
             </div>
           </div>

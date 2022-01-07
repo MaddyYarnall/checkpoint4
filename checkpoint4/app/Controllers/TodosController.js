@@ -1,4 +1,3 @@
-import { ProxyState } from "../AppState.js"
 import { todosService } from "../Services/TodosService.js"
 
 async function getMyTodos() {
@@ -12,15 +11,19 @@ async function getMyTodos() {
 export class TodosController {
   constructor() {
     getMyTodos()
+
   }
 
   async createTask() {
     window.event.preventDefault()
     console.log('submitted')
-    const tasks = ProxyState.tasks
-    let template = ''
-    tasks.forEach(t => template += t.Template)
-    document.getElementById('todos').innerHTML = template
+    const form = window.event.target
+    const taskData = {
+      // @ts-ignore
+      description: form.description.value
+    }
+
+    await todosService.createTask(taskData)
   }
 
 

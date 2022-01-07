@@ -9,7 +9,7 @@ class TodosService {
   }
 
   async createTask(todosData) {
-    const res = await sandboxApi.post('tasks', todosData)
+    const res = await sandboxApi.post('', todosData)
     console.log('post task res', res.data)
   }
 }
