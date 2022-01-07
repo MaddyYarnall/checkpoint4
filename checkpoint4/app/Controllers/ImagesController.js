@@ -1,4 +1,4 @@
-import { imagesService } from "../Services/imagesService.js"
+import { imagesService } from "../Services/ImagesService.js"
 
 
 async function getImages() {
