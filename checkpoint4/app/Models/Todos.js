@@ -8,12 +8,13 @@ export class Todos {
 
   get Template() {
     return `
-  <div class="card" style="width: 30%">
-  <div class="card-body">
-    <h5 class="card-title">Your To-Do's</h5>
-    <li>${this.description}</li>
+    <div class="card" style="width: 30%">
+    <div class="card-body">
+      <h5 class="card-title text-center">Your To-Do's</h5>
+      <input type="checkbox" name="task" value="${this.description}">
+      <label for="task">${this.description}</label>
+    </div>
   </div>
-</div>
   `
   }
 

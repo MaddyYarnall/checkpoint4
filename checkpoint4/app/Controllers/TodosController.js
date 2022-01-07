@@ -8,7 +8,6 @@ async function getMyTodos() {
   }
 }
 
-
 export class TodosController {
   constructor() {
     getMyTodos()
