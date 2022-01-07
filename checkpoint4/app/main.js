@@ -1,6 +1,9 @@
+import { ImagesController } from "./Controllers/ImagesController.js";
 
 
 class App {
+
+  imagesController = new ImagesController()
 
 }
 

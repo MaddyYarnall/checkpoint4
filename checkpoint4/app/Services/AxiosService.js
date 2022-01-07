@@ -18,7 +18,7 @@ export const quotesApi = axios.create({
 })
 
 //@ts-ignore
-export const todosApi = axios.create({
+export const sandboxApi = axios.create({
   baseURL: 'https://bcw-sandbox.herokuapp.com/api/maddyyarnall/todos',
   timeout: 8000
 })
