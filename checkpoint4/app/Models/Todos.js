@@ -18,7 +18,7 @@ export class Todos {
               </div>
 
               <form type="text">
-                <input onsubmit="app.TodosController.createTask('${newTask.id}')" type="text" placeholder="Task..">
+                <input onsubmit="app.TodosController.createTask()" type="text" placeholder="Task..">
                 <button class="btn-sm btn-dark text-light">ADD</button>
               </form>
             </div>
