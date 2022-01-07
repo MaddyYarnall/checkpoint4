@@ -1,19 +1,15 @@
 import { ProxyState } from "../AppState.js"
+import { Todos } from "../Models/Todos.js"
 import { sandboxApi } from "./AxiosService.js"
 
 
 class TodosService {
 
 
-  async getAllTasks() {
-    const res = await sandboxApi.get('todos')
-    console.log('get my taskssss', res.data)
-    ProxyState.tasks = res.data
-  }
-
   async getMyTodos() {
     const res = await sandboxApi.get('')
     console.log(res.data)
+    ProxyState.tasks = res.data.map(t => new Todos(t))
   }
 
   async createTask(todosData) {

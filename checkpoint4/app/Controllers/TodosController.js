@@ -21,7 +21,7 @@ function drawTasks() {
 export class TodosController {
   constructor() {
     ProxyState.on('tasks', drawTasks)
-    getMyTodos()
+    todosService.getMyTodos()
 
   }
 
