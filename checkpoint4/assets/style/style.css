@@ -5,7 +5,21 @@
   opacity: 65%;
 }
 
-/* .quote{
-  transform: translate(10px, 300px);
+.quote{
   font-family: 'Dancing Script', cursive;
-} */
+  margin: 0;
+}
+
+.author{
+  opacity: 0%;
+  font-family: 'Dancing Script', cursive;
+}
+
+.author:hover{
+  opacity: 100%;
+  transition: all 0.5s;
+}
+
+.quoteandauthor{
+  transform: translate(10px, 300px);
+}
