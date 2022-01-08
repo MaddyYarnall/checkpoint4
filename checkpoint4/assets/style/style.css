@@ -23,3 +23,11 @@
 .quoteandauthor{
   transform: translate(10px, 300px);
 }
+
+.weather{
+  transform: translate(950px, -140px);
+}
+
+.weatha{
+max-width: fit-content;
+}
