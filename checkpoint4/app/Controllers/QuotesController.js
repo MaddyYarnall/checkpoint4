@@ -9,18 +9,19 @@ async function getQuotes() {
   }
 }
 
-function drawQuotes() {
-  const quotes = ProxyState.quotes
+async function drawQuotes() {
+  let quotes = ProxyState.quotes
   let template = ''
-  quotes.forEach(q => template += q.Template)
+  Array.from(quotes).forEach(q => template += q.Template)
   document.getElementById('quotes').innerHTML = template
 }
+
 
 export class QuotesController {
   constructor() {
 
-    ProxyState.on('quote', drawQuotes)
     getQuotes()
-
+    ProxyState.on('quotes', drawQuotes)
   }
+
 }
