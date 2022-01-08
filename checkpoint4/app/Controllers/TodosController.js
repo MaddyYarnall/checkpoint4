@@ -39,7 +39,6 @@ export class TodosController {
 
   async removeTask(id) {
     try {
-      // FIXME bad
       console.log('deleting', id)
       await todosService.removeTask(id)
     } catch (error) {
@@ -47,6 +46,16 @@ export class TodosController {
     }
 
   }
+
+
+  async completedTask() {
+    try {
+      await todosService.completedTask()
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
 
 }
 
