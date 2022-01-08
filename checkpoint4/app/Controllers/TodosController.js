@@ -37,6 +37,16 @@ export class TodosController {
     await todosService.createTask(taskData)
   }
 
+  async removeTask(id) {
+    try {
+      // FIXME bad
+      console.log('deleting', id)
+      await todosService.removeTask(id)
+    } catch (error) {
+      console.error(error)
+    }
+
+  }
 
 }
 
