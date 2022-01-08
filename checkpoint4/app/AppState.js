@@ -7,7 +7,7 @@ class AppState extends EventEmitter {
 
   tasks = []
 
-  quote = []
+  quotes = []
 
 }
 
