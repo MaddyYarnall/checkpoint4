@@ -48,7 +48,6 @@ export class TodosController {
 
   }
 
-
   async completedTask() {
     try {
       await todosService.completedTask()
