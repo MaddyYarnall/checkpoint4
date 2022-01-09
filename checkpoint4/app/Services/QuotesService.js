@@ -7,6 +7,7 @@ class QuotesService {
   async getQuotes() {
     let res = await quotesApi.get('')
     console.log(res.data.content)
+    console.log(res.data.author)
     ProxyState.quotes = res.data.content
     console.log(ProxyState.quotes)
   }
