@@ -28,4 +28,6 @@
 
 .weather{
   transform: translate(950px, -82px);
+  background-color: gray;
+  opacity: 65%;
 }

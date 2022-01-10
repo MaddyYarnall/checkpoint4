@@ -50,9 +50,9 @@ export class TodosController {
 
   }
 
-  async completedTask() {
+  async completedTask(id) {
     try {
-      // await todosService.completedTask()
+      await todosService.completedTask(id)
     } catch (error) {
       console.error(error)
     }
