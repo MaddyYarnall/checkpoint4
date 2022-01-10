@@ -15,6 +15,7 @@ class TodosService {
     const res = await sandboxApi.post('', todosData)
     console.log('post task res', res.data)
     //TODO find a way to incoorporate res.data into the tasks array for better page reactivity (dont have to refresh the page to see the task that was just added)
+    ProxyState.tasks = [new Todos(res.data), ...ProxyState.tasks]
   }
 
   async completedTask(id) {

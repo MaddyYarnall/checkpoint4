@@ -40,11 +40,13 @@ export class TodosController {
   async removeTask(id) {
     try {
       console.log('deleting', id)
-      await todosService.removeTask(id)
+      if (window.confirm('Are you sure you want to delete this task?')) {
+        await todosService.removeTask(id)
+      }
     } catch (error) {
       console.error(error)
     }
-    window.alert('Are you sure you want to delete this task?')
+
 
   }
 
