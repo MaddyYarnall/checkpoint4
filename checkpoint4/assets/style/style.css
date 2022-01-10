@@ -22,6 +22,8 @@
 
 .quoteandauthor{
   transform: translate(10px, 300px);
+  background-color: gray;
+  opacity: 85%;
 }
 
 .weather{

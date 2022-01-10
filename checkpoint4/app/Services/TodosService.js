@@ -23,6 +23,12 @@ class TodosService {
     ProxyState.tasks = ProxyState.tasks
   }
 
+
+
+
+
+
+
   async removeTask(id) {
     const res = await sandboxApi.delete(`${id}`)
     ProxyState.tasks = ProxyState.tasks.filter(t => t.id !== id)

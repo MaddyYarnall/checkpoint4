@@ -9,6 +9,7 @@ class QuotesService {
     console.log(res.data.content)
     console.log(res.data.author)
     ProxyState.quotes = res.data.content
+    ProxyState.quotes = res.data.author
     console.log(ProxyState.quotes)
   }
 }
