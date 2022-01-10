@@ -32,6 +32,7 @@ class TodosService {
     ProxyState.tasks = ProxyState.tasks.filter(t => t.id !== id)
 
   }
+
 }
 
 export const todosService = new TodosService()

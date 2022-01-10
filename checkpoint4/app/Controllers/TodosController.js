@@ -9,7 +9,6 @@ async function getMyTodos() {
   }
 }
 
-
 function drawTasks() {
   const tasks = ProxyState.tasks
   let template = ''
@@ -57,8 +56,6 @@ export class TodosController {
       console.error(error)
     }
   }
-
-
 
 
 
