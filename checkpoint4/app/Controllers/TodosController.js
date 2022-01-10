@@ -52,7 +52,7 @@ export class TodosController {
 
   async completedTask() {
     try {
-      await todosService.completedTask()
+      // await todosService.completedTask()
     } catch (error) {
       console.error(error)
     }

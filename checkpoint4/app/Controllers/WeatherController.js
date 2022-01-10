@@ -12,9 +12,7 @@ async function getWeather() {
 
 function _drawWeather() {
   const weather = ProxyState.weather
-  let template = ''
-  weather.forEach(w => template += w.Template)
-  document.getElementById('weather').innerHTML = template
+  document.getElementById('weatherr').innerHTML = weather.template
 }
 
 

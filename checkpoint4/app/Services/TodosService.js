@@ -14,29 +14,25 @@ class TodosService {
   async createTask(todosData) {
     const res = await sandboxApi.post('', todosData)
     console.log('post task res', res.data)
-    //TODO find a way to incoorporate res.data into the tasks array for better page reactivity (dont have to refresh the page to see the task that was just added)
     ProxyState.tasks = [new Todos(res.data), ...ProxyState.tasks]
   }
 
-  async completedTask(id) {
-    const task = ProxyState.tasks
-    const res = await sandboxApi.put(`${id}`, task)
-    ProxyState.tasks = ProxyState.tasks
-  }
+  // async completedTask() {
+  //   const task = ProxyState.tasks
+  //   task.completed = !task.completed
+  //   const res = await sandboxApi.put(task.id, task)
+  //   ProxyState.tasks = ProxyState.tasks
+  // }
 
+  //NOTE I need help trying to get the task to stay checked on reload... tried following the example from the spellbook lecture but i'm getting red squiggly bois that are mad 
 
-
-
-
-
+  //NOTE Don't forget to un-comment line 55 in the todos controller
 
   async removeTask(id) {
     const res = await sandboxApi.delete(`${id}`)
     ProxyState.tasks = ProxyState.tasks.filter(t => t.id !== id)
 
   }
-
-
 }
 
 export const todosService = new TodosService()

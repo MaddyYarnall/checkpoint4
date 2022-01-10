@@ -27,9 +27,5 @@
 }
 
 .weather{
-  transform: translate(950px, -140px);
-}
-
-.weatha{
-max-width: fit-content;
+  transform: translate(950px, -82px);
 }
