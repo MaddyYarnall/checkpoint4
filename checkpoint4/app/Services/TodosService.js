@@ -25,8 +25,6 @@ class TodosService {
     ProxyState.tasks = ProxyState.tasks
   }
 
-  //NOTE I need help trying to get the task to stay checked on reload... tried following the example from the spellbook lecture but i'm getting red squiggly bois that are mad 
-
   async removeTask(id) {
     const res = await sandboxApi.delete(`${id}`)
     ProxyState.tasks = ProxyState.tasks.filter(t => t.id !== id)

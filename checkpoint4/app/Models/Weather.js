@@ -8,7 +8,7 @@ export class Weather {
   get Template() {
     return `
     <p>${this.city}</p>
-    <p>${this.temp}℉</p>
+    <p>${this.temp}</p>
     <p>${this.description}</p>
   `
   }
